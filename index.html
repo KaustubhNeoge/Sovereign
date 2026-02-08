@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Infrastructure Modeling</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Network-Based Game-Theoretic Financial Modeling</h1>
+            <p>System Stability & Risk Analysis</p>
+        </header>
+
+        <main>
+            <div class="glass-panel canvas-container">
+                <canvas id="networkCanvas"></canvas>
+                <div id="node-tooltip" class="tooltip hidden"></div>
+                <div id="legend" class="legend-container">
+                    <h3 style="margin: 0 0 10px 0; font-size: 0.9em; color: #cbd5e1;">Filter by Category</h3>
+                    <button class="legend-btn active" data-type="ALL"
+                        style="background: linear-gradient(135deg, #6366f1, #4f46e5);">
+                        <span class="legend-color" style="background: #ffffff;"></span>
+                        <span>All</span>
+                    </button>
+                    <button class="legend-btn" data-type="BANK">
+                        <span class="legend-color" style="background: #3b82f6;"></span>
+                        <span>Banks</span>
+                    </button>
+                    <button class="legend-btn" data-type="CLEARING_HOUSE">
+                        <span class="legend-color" style="background: #8b5cf6;"></span>
+                        <span>Clearing House</span>
+                    </button>
+                    <button class="legend-btn" data-type="EXCHANGE">
+                        <span class="legend-color" style="background: #f59e0b;"></span>
+                        <span>Stock Exchange</span>
+                    </button>
+                    <button class="legend-btn" data-type="INSURER">
+                        <span class="legend-color" style="background: #10b981;"></span>
+                        <span>Insurance</span>
+                    </button>
+                </div>
+            </div>
+
+            <aside class="glass-panel controls-panel">
+                <div class="panel-section">
+                    <h2>System Status</h2>
+                    <div id="status-indicator" class="status-ok">Nash Equilibrium</div>
+                </div>
+
+                <div class="panel-section">
+                    <h2>Live News Feed</h2>
+                    <div id="news-feed" class="news-scroller">
+                        <!-- News items injected here -->
+                    </div>
+                </div>
+
+                <div class="panel-section actions">
+                    <button id="btn-simulate" class="primary-btn">Simulate Market Cycle</button>
+                    <button id="btn-clearing" class="action-btn">
+                        <span class="icon">🛡️</span> Safe Clearing Mechanism
+                    </button>
+                    <button id="btn-apply-changes" class="action-btn"
+                        style="background: linear-gradient(135deg, #6366f1, #4f46e5); display: none;">
+                        <span class="icon">✅</span> Apply Stabilization
+                    </button>
+                    <button id="btn-policy" class="secondary-btn" disabled>Generate Regulatory Policy</button>
+                </div>
+
+                <div id="analysis-output" class="panel-section hidden">
+                    <h3>Featherless AI Analysis</h3>
+                    <div id="featherless-content" class="typing-text"></div>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
