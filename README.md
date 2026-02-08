@@ -2,7 +2,7 @@
 
 A network-based game-theoretic financial modeling visualization tool that displays financial institutions as nodes and their relationships as edges in an interactive graph.
 
-##Website Live at: https://datathon-sovereign.vercel.app/
+## Website Live at: https://datathon-sovereign.vercel.app/
 
 ## Setup & Installation
 
